@@ -1,0 +1,62 @@
+import csv
+import numpy as np
+import pandas as pd
+from pandas import DataFrame
+
+Elevation_Weather = pd.DataFrame(index=weather, columns=elevation, dtype=int)
+Elevation_Weather = Elevation_Weather.fillna(0)
+
+Duration_weather = pd.DataFrame(index=weather,columns=duration, dtype=int)
+Duration_weather = Duration_weather.fillna(0)
+
+duration_Temperature = pd.DataFrame(index=temperature,columns=duration, dtype=int)
+duration_Temperature = duration_Temperature.fillna(0)
+
+Elevation_Traffic = pd.DataFrame(index=traffic, columns=elevation, dtype=int)
+Elevation_Traffic = Elevation_Traffic.fillna(0)
+
+BikeLanes_Traffic = pd.Data
+weather = ['rainy', 'stormy', 'sunny', 'cloudy', 'hot', 'cold', 'dry', 'wet', 'windy', 'snow']
+traffic = ['low', 'moderate', 'high']
+elevation = ['low', 'moderate', 'high']
+bikeLine = ['low', 'moderate', 'high']
+dayTime = ['morning', 'afternoon', 'evening']
+day = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+distance = ['extremely_short', 'short', 'medium', 'long', 'extremely_long']
+duration = ['low', 'moderate', 'high']
+temperature = ['temp-0-10', 'temp-10-20', 'temp-20-30', 'temp-30-40', 'temp-40-50', 'temp-50-60', 'temp-60-70',
+               'temp-70-80', 'temp-80-90', 'temp-90-100']
+# arrays for history:
+Frame(index=traffic, columns=bikeLine, dtype=int)
+BikeLanes_Traffic = BikeLanes_Traffic.fillna(0)
+
+
+
+#elevation_index: int=0
+weather_index =0
+duration_index=0
+traffic_index=0
+bikelane_index=0
+temperature_index=0
+
+
+#read routes and put it in dataFrame:
+routes = pd.read_csv('routes.csv')
+
+print(routes.head())
+
+for route in routes.index :
+    if (routes.loc[route,'elevation'] in elevation) and (routes.loc[route,'weather'] in weather):
+        elevation_index = routes.loc[route,'elevation']
+        weather_index = routes.loc[route,'weather']
+        #Elevation_Weather(weather_index)[elevation_index] += int(routes.loc(route,['rate']))
+        Elevation_Weather.loc[weather_index, elevation_index] += int(routes.loc[route,['rate']])
+    if (routes.loc[route,'elevation'] in elevation) and (routes.loc[route,'duration'] in duration):
+        elevation_index = routes.loc[route, 'elevation']
+        duration_index = routes.loc[route,'duration']
+        Duration_weather.loc[weather_index, duration_index] += int(routes.loc[route,['rate']])
+    if(routes.loc[route,'duration'] in duration) and (routes.loc[route,''])
+
+
+print(Elevation_Weather)
+print(Duration_weather)
