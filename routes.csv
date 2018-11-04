@@ -1,4 +1,5 @@
 elevation,weather,temp,traffic,day,dayTime,bikeLane,distance,duration,rate
-high,sunny,temp-20-30,low,Friday,afternoon,moderate,meduim,moderate,3
-low,windy,temp-30-40,moderate,Sunday,morning,high,long,high,5
-high,sunny,temp-20-30,low,Friday,afternoon,moderate,meduim,moderate,4
+high_elevation,sunny,temp-20-25,low_traffic,Friday,afternoon,medium_bikeLane,meduim_distance,medium_duration,3
+low_elevation,windy,temp-30-40,medium_traffic,Sunday,morning,high_bikeLane,long_distance,high_duration,5
+high_elevation,sunny,temp-20-25,low_traffic,Friday,afternoon,medium_bikeLane,meduim_distance,medium_duration,4
+high_elevation,sunny,temp-25-30,low_traffic,Monday,morning,high_bikeLane,long_distance,high_duration,2
